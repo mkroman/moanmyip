@@ -1,0 +1,22 @@
+[package]
+name = "moanmyip"
+version = "0.1.0"
+authors = ["Mikkel Kroman <mk@maero.dk>"]
+edition = "2018"
+
+[dependencies]
+rodio = { version = "0.10.0", features = ["mp3"] }
+reqwest = "0.10.4"
+futures = "0.3.4"
+tokio = { version = "0.2.13", features = ["full"] }
+failure = "0.1.7"
+scraper = "0.11.0"
+url = "2.1.1"
+lazy_static = "1.4.0"
+tempfile = "3.1.0"
+env_logger = "0.7.1"
+log = "0.4.8"
+
+[profile.release]
+lto = "fat"
+codegen-units = 1
